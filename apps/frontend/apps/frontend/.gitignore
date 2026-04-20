@@ -1,0 +1,29 @@
+# Node.js
+node_modules
+.next
+out
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+pnpm-lock.yaml
+
+# Environment variables
+.env*.local
+.env
+
+# Next.js build output
+.next/
+
+# Next.js cache
+.next/cache
+.next/static
+
+# Logs
+*.log
+
+# Misc
+.DS_Store
+*.seed
+*.sqlite
+*.sqlite-journal

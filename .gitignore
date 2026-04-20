@@ -1,0 +1,9 @@
+
+
+apps/backend/node_modules
+apps/backend/coverage
+apps/backend/data/database.sqlite
+
+apps/frontend/node_modules
+apps/frontend/coverage
+apps/frontend/.next
