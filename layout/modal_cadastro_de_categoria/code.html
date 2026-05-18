@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c1c7d3",
+                    "inverse-primary": "#a3c9ff",
+                    "surface-dim": "#d8dae0",
+                    "on-tertiary": "#ffffff",
+                    "surface-variant": "#e1e2e9",
+                    "on-primary": "#ffffff",
+                    "primary-fixed": "#d3e3ff",
+                    "on-background": "#191c21",
+                    "secondary-fixed-dim": "#7edb7b",
+                    "error": "#ba1a1a",
+                    "surface-container": "#ecedf4",
+                    "primary-container": "#005da7",
+                    "surface-tint": "#0860aa",
+                    "secondary": "#006e1c",
+                    "on-tertiary-container": "#ffc9ab",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#2e3036",
+                    "on-tertiary-fixed": "#321300",
+                    "surface-container-highest": "#e1e2e9",
+                    "surface-container-high": "#e7e8ef",
+                    "on-surface-variant": "#414751",
+                    "surface": "#f8f9ff",
+                    "primary": "#00457f",
+                    "inverse-on-surface": "#eff0f7",
+                    "on-primary-container": "#bcd6ff",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#ffdbc8",
+                    "tertiary-container": "#954501",
+                    "surface-container-low": "#f2f3fa",
+                    "secondary-fixed": "#99f894",
+                    "on-primary-fixed-variant": "#004883",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#713200",
+                    "background": "#f8f9ff",
+                    "surface-bright": "#f8f9ff",
+                    "error-container": "#ffdad6",
+                    "on-surface": "#191c21",
+                    "on-secondary-fixed-variant": "#005313",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#96f592",
+                    "tertiary-fixed-dim": "#ffb68b",
+                    "primary-fixed-dim": "#a3c9ff",
+                    "outline": "#727782",
+                    "on-secondary-fixed": "#002204",
+                    "on-secondary-container": "#0a7320",
+                    "on-primary-fixed": "#001c39",
+                    "on-tertiary-fixed-variant": "#753400"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "md": "16px",
+                    "container-padding": "16px",
+                    "xl": "32px",
+                    "xs": "4px",
+                    "base": "8px",
+                    "lg": "24px"
+            },
+            "fontFamily": {
+                    "h1": ["Inter"],
+                    "label-small": ["Inter"],
+                    "h2": ["Inter"],
+                    "body": ["Inter"],
+                    "nav-mobile": ["Inter"],
+                    "button": ["Inter"]
+            },
+            "fontSize": {
+                    "h1": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "label-small": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                    "h2": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                    "body": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "nav-mobile": ["10px", {"lineHeight": "12px", "fontWeight": "600"}],
+                    "button": ["14px", {"lineHeight": "14px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased overflow-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 w-full h-14 z-50 flex justify-between items-center px-4 md:px-8 bg-white border-b border-outline-variant shadow-sm">
+<div class="flex items-center gap-4">
+<span class="text-xl font-bold text-[#005DA7]">FinTrack</span>
+</div>
+<div class="hidden md:flex items-center space-x-6 h-full">
+<nav class="flex items-center space-x-6 h-full">
+<a class="text-outline hover:bg-slate-50 transition-colors h-full flex items-center px-2" href="#">Dashboard</a>
+<a class="text-outline hover:bg-slate-50 transition-colors h-full flex items-center px-2" href="#">Transactions</a>
+<a class="border-b-2 border-[#005DA7] text-[#005DA7] pb-1 h-full flex items-center px-2" href="#">Categories</a>
+<a class="text-outline hover:bg-slate-50 transition-colors h-full flex items-center px-2" href="#">Budgets</a>
+</nav>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 hover:bg-slate-50 rounded-full transition-colors">
+<span class="material-symbols-outlined text-outline">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="professional male portrait with business attire in a modern office environment with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXYlr0arcI6j8ctZl8cyjgOq3Z4Kbi9TsPQA_WzJJeN0t_S-tjgO3Q-jqJXpU8Xc10mTpzY9wxLf_d1sIrYM9SEW7gslAOCcNRsa-I-JJiv9axOq-8r2KToBbr3pyZUOF6KYvZhAoYymWAYwgaTF01OdwCcxi-yqX3VTD4P1ZnAigmAsmn05toVmQaI_DAhdJ_gi2tAd0S2e4pDLcRDvE6N77xrI4iUyCBiGP95x5JHOfVlaga30zq7ivadwatx89jKwJoSlKLzQ"/>
+</div>
+</div>
+</header>
+<!-- Sidebar (Desktop) -->
+<aside class="hidden md:flex flex-col fixed left-0 top-0 h-full w-64 z-40 bg-[#F8F9FF] border-r border-outline-variant pt-20">
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-[#005DA7]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+<span class="text-lg font-black text-[#005DA7]">FinTrack</span>
+</div>
+<p class="text-xs text-outline font-medium">Corporate Finance</p>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-outline hover:text-[#005DA7] hover:bg-[#ECEDF5] rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-outline hover:text-[#005DA7] hover:bg-[#ECEDF5] rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-medium">Transactions</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-blue-50 text-[#005DA7] font-semibold border-r-4 border-[#005DA7] transition-all" href="#">
+<span class="material-symbols-outlined">category</span>
+<span class="font-medium">Categories</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-outline hover:text-[#005DA7] hover:bg-[#ECEDF5] rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="font-medium">Budgets</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-outline hover:text-[#005DA7] hover:bg-[#ECEDF5] rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-medium">Reports</span>
+</a>
+</nav>
+<div class="p-4 mt-auto mb-4">
+<button class="w-full bg-[#005DA7] text-white py-3 px-4 rounded-xl font-button flex items-center justify-center gap-2 shadow-sm hover:opacity-90 active:opacity-80 transition-all">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                New Entry
+            </button>
+</div>
+</aside>
+<!-- Main Content (Background Canvas) -->
+<main class="md:ml-64 pt-20 px-4 md:px-8 min-h-screen pb-24">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h1 class="font-h1 text-h1 text-on-surface">Gestão de Categorias</h1>
+<p class="text-body text-outline">Organize seus gastos e receitas por tipos personalizados.</p>
+</div>
+<button class="bg-[#005DA7] text-white px-6 py-2 rounded-xl font-button flex items-center gap-2 hover:opacity-95 transition-opacity">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                    Nova Categoria
+                </button>
+</div>
+<!-- Dashboard Style Bento Grid for Categories -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Main Categories Table/List Card -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden">
+<div class="bg-surface-container-low px-6 py-4 border-b border-outline-variant flex justify-between items-center">
+<span class="font-h2 text-h2">Categorias Ativas</span>
+<div class="flex gap-2">
+<span class="bg-[#ECEDF5] px-3 py-1 rounded-full text-xs font-semibold text-[#005DA7]">Total: 12</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-outline text-[12px] uppercase tracking-wider">
+<th class="px-6 py-3 font-semibold">Categoria</th>
+<th class="px-6 py-3 font-semibold">Ícone</th>
+<th class="px-6 py-3 font-semibold">Orçamento Mensal</th>
+<th class="px-6 py-3 font-semibold">Gasto Atual</th>
+<th class="px-6 py-3 font-semibold text-right">Ações</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-4 font-medium">Alimentação</td>
+<td class="px-6 py-4"><span class="material-symbols-outlined text-tertiary">restaurant</span></td>
+<td class="px-6 py-4 text-body">R$ 1.200,00</td>
+<td class="px-6 py-4">
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full" style="width: 65%;"></div>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-outline hover:text-primary transition-colors"><span class="material-symbols-outlined">edit</span></button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-4 font-medium">Transporte</td>
+<td class="px-6 py-4"><span class="material-symbols-outlined text-[#005DA7]">directions_car</span></td>
+<td class="px-6 py-4 text-body">R$ 450,00</td>
+<td class="px-6 py-4">
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full" style="width: 40%;"></div>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-outline hover:text-primary transition-colors"><span class="material-symbols-outlined">edit</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Secondary Info Panel -->
+<div class="col-span-12 lg:col-span-4 space-y-6">
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant shadow-sm">
+<h3 class="font-h2 text-h2 mb-4">Dicas de Gestão</h3>
+<div class="flex gap-4 items-start mb-4">
+<div class="bg-primary-fixed p-2 rounded-lg text-[#005DA7]">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+<p class="text-body text-on-surface-variant leading-relaxed">Mantenha suas categorias simples para facilitar a conciliação bancária semanal.</p>
+</div>
+</div>
+<div class="bg-[#ECEDF5] p-6 rounded-xl border border-outline-variant">
+<h3 class="font-h2 text-[#005DA7] mb-2">Visão Geral</h3>
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<span class="text-body text-outline">Receitas</span>
+<span class="text-body font-bold text-secondary">R$ 8.500,00</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-body text-outline">Despesas</span>
+<span class="text-body font-bold text-error">R$ 4.200,00</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Modal Overlay -->
+<div class="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-[2px]">
+<!-- Modal Container -->
+<div class="bg-white w-full max-w-md mx-4 rounded-xl shadow-2xl overflow-hidden border border-outline-variant">
+<!-- Modal Header -->
+<div class="px-6 py-5 border-b border-outline-variant flex justify-between items-center bg-surface-container-lowest">
+<h2 class="font-h1 text-h1 text-on-surface">Nova Categoria</h2>
+<button class="text-outline hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Modal Content (Body) -->
+<div class="p-6 space-y-6">
+<div class="space-y-2">
+<label class="font-button text-on-surface-variant block" for="category_name">Nome</label>
+<input class="w-full h-12 px-4 rounded-lg border border-outline focus:border-primary focus:ring-4 focus:ring-primary/20 transition-all outline-none text-body" id="category_name" placeholder="Ex: Mercado, Aluguel, Lazer" type="text"/>
+</div>
+<!-- Decoration / Helper Illustration (Contextual) -->
+</div>
+<!-- Modal Footer -->
+<div class="px-6 py-4 bg-surface-container-low flex items-center justify-end gap-3">
+<button class="px-6 py-2.5 rounded-xl font-button text-on-surface hover:bg-surface-container-high transition-colors">
+                    Cancelar
+                </button>
+<button class="px-6 py-2.5 rounded-xl font-button bg-[#005DA7] text-white hover:opacity-90 active:opacity-80 shadow-sm transition-all">
+                    Salvar Categoria
+                </button>
+</div>
+</div>
+</div>
+<!-- Mobile Bottom Navigation -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-4 bg-white border-t border-outline-variant shadow-lg">
+<a class="flex flex-col items-center justify-center text-outline transition-transform" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium font-inter">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline transition-transform" href="#">
+<span class="material-symbols-outlined">list_alt</span>
+<span class="text-[10px] font-medium font-inter">Activity</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#005DA7] scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">category</span>
+<span class="text-[10px] font-medium font-inter">Categories</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline transition-transform" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium font-inter">Profile</span>
+</a>
+</nav>
+</body></html>
