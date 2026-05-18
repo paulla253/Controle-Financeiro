@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  /* Fonte */
+  --font-sans: var(--font-inter);
+
+  /* Material 3 — Cores */
+  --color-primary: #005da7;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #2976c7;
+  --color-on-primary-container: #fdfcff;
+  --color-secondary: #006e1c;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #91f78e;
+  --color-on-secondary-container: #00731e;
+  --color-tertiary: #7f5300;
+  --color-on-tertiary: #ffffff;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  --color-background: #f8f9ff;
+  --color-on-background: #191c21;
+  --color-surface: #f8f9ff;
+  --color-surface-dim: #d8dae1;
+  --color-surface-bright: #f8f9ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f2f3fb;
+  --color-surface-container: #ecedf5;
+  --color-surface-container-high: #e6e8ef;
+  --color-surface-container-highest: #e1e2e9;
+  --color-on-surface: #191c21;
+  --color-on-surface-variant: #414751;
+  --color-outline: #717783;
+  --color-outline-variant: #c1c7d3;
+  --color-inverse-surface: #2e3036;
+  --color-inverse-on-surface: #eff0f8;
+  --color-inverse-primary: #a4c9ff;
+  --color-surface-tint: #0060ac;
+}
+
+.dark {
+  --color-primary: #a4c9ff;
+  --color-on-primary: #003060;
+  --color-primary-container: #00468a;
+  --color-on-primary-container: #d6e3ff;
+
+  --color-secondary: #76db74;
+  --color-on-secondary: #003909;
+  --color-secondary-container: #005313;
+  --color-on-secondary-container: #91f78e;
+
+  --color-tertiary: #ffb960;
+  --color-on-tertiary: #432c00;
+  --color-tertiary-container: #5f4200;
+  --color-on-tertiary-container: #ffddb0;
+
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+
+  --color-background: #111318;
+  --color-on-background: #e1e2e9;
+
+  --color-surface: #111318;
+  --color-surface-dim: #111318;
+  --color-surface-bright: #37393f;
+  --color-surface-container-lowest: #0c0e13;
+  --color-surface-container-low: #191c21;
+  --color-surface-container: #1d2026;
+  --color-surface-container-high: #282a30;
+  --color-surface-container-highest: #33353b;
+
+  --color-on-surface: #e1e2e9;
+  --color-on-surface-variant: #c1c7d3;
+
+  --color-outline: #8b9199;
+  --color-outline-variant: #414751;
+
+  --color-inverse-surface: #e1e2e9;
+  --color-inverse-on-surface: #2e3036;
+  --color-inverse-primary: #005da7;
+  --color-surface-tint: #a4c9ff;
+}
