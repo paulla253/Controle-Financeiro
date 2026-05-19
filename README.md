@@ -67,7 +67,7 @@ O arquivo `prompt_inicial.md` na raiz do projeto foi utilizado para dar inicio a
 - **Objetivo:** aplicacao monorepo de controle financeiro pessoal
 - **Diretrizes de negocio:** gerenciamento de categorias e despesas, importacao/exportacao CSV, graficos de barras e pizza
 - **Diretrizes tecnicas:** NestJS + TypeORM + SQLite no backend, Next.js + Chart.js no frontend, testes com Jest e Playwright
-- **Layout:** referencias visuais na pasta `layout/` com telas e modais prontos
+- **Layout:** referencias visuais na pasta `layout/` com telas e modais prontos feitos no stitch
 - **Fora do escopo:** multiplos usuarios, login, metas de investimento, testes de performance
 
 ### Templates
@@ -80,20 +80,6 @@ A pasta `templates/` contem os moldes utilizados pelo Claude Code para gerar os 
 | `techspec-template.md` | Especificacao Tecnica de implementacao   |
 | `tasks-template.md`    | Lista resumida de tarefas de alto nivel  |
 | `task-template.md`     | Detalhamento individual de cada tarefa   |
-
-### Comandos (Slash Commands)
-
-A pasta `commands/` contem instrucoes para os slash commands customizados do Claude Code, que guiam a geracao dos documentos de planejamento a partir dos templates:
-
-| Comando           | O que faz                                                                                                                          |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `/criar-prd`      | Gera o PRD fazendo perguntas de clarificacao antes de produzir o documento                                                         |
-| `/criar-techspec` | Gera a Tech Spec explorando o projeto e fazendo perguntas de clarificacao                                                          |
-| `/criar-tasks`    | Gera a lista de tarefas a partir do PRD e da Tech Spec, exibindo uma lista de alto nivel para aprovacao antes de criar os arquivos |
-
-Os documentos gerados ficam em `tasks/prd-controle-financeiro/` e sao referenciados pelas tasks individuais durante a implementacao.
-
----
 
 ## Skills Utilizadas
 
