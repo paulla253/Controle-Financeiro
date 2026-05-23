@@ -133,9 +133,6 @@ export default function DashboardPage() {
                   <th className="px-6 py-3 text-xs font-medium uppercase tracking-wider text-on-surface-variant">
                     Categoria
                   </th>
-                  <th className="px-6 py-3 text-xs font-medium uppercase tracking-wider text-on-surface-variant">
-                    Descrição
-                  </th>
                   <th className="px-6 py-3 text-right text-xs font-medium uppercase tracking-wider text-on-surface-variant">
                     Valor
                   </th>
@@ -147,13 +144,8 @@ export default function DashboardPage() {
                     <td className="px-6 py-4 text-sm text-on-surface">
                       {formatDateBR(expense.date)}
                     </td>
-                    <td className="px-6 py-4">
-                      <span className="text-sm font-medium text-primary">
-                        {expense.category.name}
-                      </span>
-                    </td>
-                    <td className="px-6 py-4 text-sm text-on-surface-variant">
-                      {expense.description ?? '—'}
+                    <td className="px-6 py-4 text-sm text-on-surface">
+                      {expense.category.name}
                     </td>
                     <td className="px-6 py-4 text-right text-sm font-bold text-on-surface">
                       {formatCurrencyBRL(expense.amount)}

@@ -39,6 +39,13 @@ export class ExpensesController {
     return this.expensesService.create(dto);
   }
 
+  @Get('years')
+  @ApiOperation({ summary: 'List distinct years with expenses' })
+  @ApiResponse({ status: 200, description: 'Array of years with records' })
+  getYearsWithExpenses() {
+    return this.expensesService.getYearsWithExpenses();
+  }
+
   @Get('annual-summary')
   @ApiOperation({ summary: 'Annual summary by month (RF-017, RF-018)' })
   @ApiQuery({ name: 'year', type: Number, required: true })

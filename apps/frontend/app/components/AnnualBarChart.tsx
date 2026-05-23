@@ -3,16 +3,18 @@
 import '../lib/chartjs-setup';
 import { Bar } from 'react-chartjs-2';
 import { useState } from 'react';
-import { useAnnualSummary } from '../lib/queries/useSummaries';
+import { useAnnualSummary, useExpenseYears } from '../lib/queries/useSummaries';
 import { formatCurrencyBRL } from '../lib/format';
 
 const MONTHS = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
-const YEAR_RANGE = 5;
 
 export function AnnualBarChart() {
   const currentYear = new Date().getFullYear();
-  const [year, setYear] = useState(currentYear);
-  const { data = [], isLoading } = useAnnualSummary(year);
+  const { data: yearOptions = [] } = useExpenseYears();
+  const defaultYear = yearOptions.length > 0 ? yearOptions[0] : currentYear;
+  const [year, setYear] = useState<number | null>(null);
+  const selectedYear = year ?? defaultYear;
+  const { data = [], isLoading } = useAnnualSummary(selectedYear);
 
   const totals = Array.from({ length: 12 }, (_, i) => {
     const found = data.find((d) => d.month === i + 1);
@@ -30,8 +32,6 @@ export function AnnualBarChart() {
     ],
   };
 
-  const yearOptions = Array.from({ length: YEAR_RANGE }, (_, i) => currentYear - i);
-
   return (
     <div className="flex flex-col gap-4">
       <div className="flex items-center justify-between">
@@ -40,7 +40,7 @@ export function AnnualBarChart() {
         </h2>
         <select
           aria-label="Selecionar ano"
-          value={year}
+          value={selectedYear}
           onChange={(e) => setYear(Number(e.target.value))}
           className="rounded border border-outline-variant bg-surface-container-low px-2 py-1 text-sm text-on-surface"
         >

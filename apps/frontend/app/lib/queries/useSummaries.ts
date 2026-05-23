@@ -20,6 +20,13 @@ export function useAnnualSummary(year: number) {
   });
 }
 
+export function useExpenseYears() {
+  return useQuery<number[]>({
+    queryKey: ['expense-years'],
+    queryFn: () => apiClient.get<number[]>('/expenses/years'),
+  });
+}
+
 export function useCurrentMonthSummary() {
   return useQuery<CategorySummary[]>({
     queryKey: ['current-month-summary'],

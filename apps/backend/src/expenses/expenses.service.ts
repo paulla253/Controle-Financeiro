@@ -105,6 +105,17 @@ export class ExpensesService {
     }));
   }
 
+  async getYearsWithExpenses(): Promise<number[]> {
+    const rows = await this.expenseRepository
+      .createQueryBuilder('expense')
+      .select(`CAST(strftime('%Y', expense.date) AS INTEGER)`, 'year')
+      .groupBy(`strftime('%Y', expense.date)`)
+      .orderBy('year', 'DESC')
+      .getRawMany<{ year: number }>();
+
+    return rows.map((r) => Number(r.year));
+  }
+
   async currentMonthSummary(): Promise<CategorySummaryDto[]> {
     const now = new Date();
     const year = String(now.getUTCFullYear());
